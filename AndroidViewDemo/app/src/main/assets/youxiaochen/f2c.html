@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>工厂店</title>
+<link rel="stylesheet" href="./css/swiper.min.css">
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?f3061b7e18d703a1b052ae6b4585d799";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();(function(designWidth,maxWidth){var doc=document,win=window;var docEl=doc.documentElement;var metaEl,metaElCon;var styleText,remStyle=document.createElement("style");var tid;function refreshRem(){var width=docEl.getBoundingClientRect().width;if(!maxWidth){maxWidth=540}if(width>maxWidth){width=maxWidth}var rem=width*100/designWidth;remStyle.innerHTML="html{font-size:"+rem+"px;}"}metaEl=doc.querySelector('meta[name="viewport"]');metaElCon="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no,viewport-fit=cover";if(metaEl){metaEl.setAttribute("content",metaElCon)}else{metaEl=doc.createElement("meta");metaEl.setAttribute("name","viewport");metaEl.setAttribute("content",metaElCon);if(docEl.firstElementChild){docEl.firstElementChild.appendChild(metaEl)}else{var wrap=doc.createElement("div");wrap.appendChild(metaEl);doc.write(wrap.innerHTML);wrap=null}}refreshRem();if(docEl.firstElementChild){docEl.firstElementChild.appendChild(remStyle)}else{var wrap=doc.createElement("div");wrap.appendChild(remStyle);doc.write(wrap.innerHTML);wrap=null}win.addEventListener("resize",function(){clearTimeout(tid);tid=setTimeout(refreshRem,300)},false);win.addEventListener("pageshow",function(e){if(e.persisted){clearTimeout(tid);tid=setTimeout(refreshRem,300)}},false);if(doc.readyState==="complete"){doc.body.style.fontSize="0.12rem"}else{doc.addEventListener("DOMContentLoaded",function(e){doc.body.style.fontSize="0.12rem"},false)}})(375,750);</script><style>/* 重置样式 */html{-ms-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;}body,p{margin:0;padding:0;}body{font-size: 0.12rem; font-family: "PingFangSC-Regular", "sans-serif";-webkit-touch-callout:none;touch-callout:none;-webkit-user-select: none;user-select: none;-webkit-touch-callout: none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;background: #ffffff;display: block;}ul{margin:0; padding:0; list-style:none;}li{float: left;}img{border:0 none;max-width:100%;vertical-align:top; height:auto;}a,a:hover,a:active,a:visited,a:link,a:focus{width: 100%;height: 100%;display: inline-block;text-decoration:none;color: #000000;}
+/* 公共样式 */
+.panel_aotu{
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+}
+.panel_top{
+	margin-top: 0.2rem;
+}
+.panel_l{
+	float: left;
+}
+.panel_r{
+	float: right;
+}
+.panel_c:after{
+    content: " ";
+    display: block;;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.panel_title .panel_l p:first-of-type{
+	font-size: 0.2rem;
+	color: #191919;
+}
+.panel_title .panel_l p:last-of-type{
+	font-size: 0.13rem;
+	margin-top: 0.04rem;
+	color: #B9BCBF;
+}
+.panel_title .panel_r p{
+	font-size: 0.15rem;
+	margin-top: 0.15rem;
+}
+ul li{
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+ul li a{
+	font-size: 0.13rem;
+	text-align: center;
+}
+ul li p{
+	line-height: 0.18rem;
+}
+ul li p:first-of-type{
+	color: #B9BCBF;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ul li p:last-of-type{
+	color: #484649;
+}
+img{
+	width: 100%;
+}
+/* 模板样式 */
+#iphone{
+	width: 3.75rem;
+	margin: 0 auto;
+	background: #ffffff;
+	overflow: hidden;
+}
+#banner, #panel_6, #panel_1, #panel_4, #panel_t_1, #panel_t_3_h, #panel_t_2, #panel_t_3_s, #panel_9{
+	position: relative;
+	width: 3.75rem;
+	overflow: hidden;
+}
+#panel_6, #panel_4{
+	padding-bottom: 0.3rem;
+}
+#panel_6 li{
+	width: 1rem;
+}
+#panel_6 ul li:nth-of-type(2){
+	margin: 0 0.16rem;
+}
+#panel_4 ul li{
+	width: 1.58rem;
+}
+#panel_4 ul li:nth-of-type(2n){
+	margin-left: 0.18rem;
+}
+#panel_t_3_h div.panel_l,#panel_t_3_h div.panel_r{
+	width: 1.58rem;
+}
+#panel_t_3_h .panel_r ul li:last-of-type{
+	margin-top: 0.17rem;
+}
+#panel_t_2 div.panel_l,#panel_t_2 div.panel_r{
+	width: 1.58rem;
+}
+#panel_t_3_s .panel_l ul li, #panel_t_3_s .panel_r ul li{
+	width: 1.58rem;
+}
+#panel_9{
+	padding-bottom: 0.2rem;
+}
+#panel_9 ul li{
+	width: 1rem;
+}
+#panel_9 ul li:nth-of-type(3n+2){
+	margin: 0 0.17rem;
+}
+/* 插件样式修改 */
+.swiper-pagination-bullet{
+	background: #FFFFFF;
+	opacity: 1;
+	width: 0.068rem;
+	height: 0.068rem;
+	margin: 0 0.038rem;
+	border-radius: 50%;
+	background: #D8D8D8;
+}
+.swiper-pagination-bullet-active{
+	background: #030303 !important;
+}
+#banner .swiper-pagination{
+	text-align: right;
+	bottom: 0.05rem;
+}
+#banner .swiper-pagination span{
+	width: 0.068rem;
+	height: 0.068rem;
+	margin: 0 0.038rem;
+	border-radius: 50%;
+	background: #D8D8D8;
+}
+</style>
+
+</head>
+<body>
+	<div id="iphone">
+		<!-- banner主题 -->
+		<div id="banner"></div>
+		<!-- 六洞banner主题 -->
+		<div id="panel_6"></div>
+		<!-- 一个洞 -->
+		<div id="panel_1"></div>
+		<!-- 四个洞 -->
+		<div id="panel_4"></div>
+		<!-- 单图主题 -->
+		<div id="panel_t_1"></div>
+		<!-- 三图横主题 -->
+		<div id="panel_t_3_h"></div>
+		<!-- 双图主题 -->
+		<div id="panel_t_2"></div>
+		<!-- 三图竖主题 -->
+		<div id="panel_t_3_s"></div>
+		<!-- 为你推荐主题 -->
+		<div id="panel_9"></div>
+	</div>
+	<script src="./js/jquery-2.1.1.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/function.js"></script>
+	<script>
+	    /*判断H5页面是否在WEB容器中*/
+		function openInWebview () {
+		    var ua = navigator.userAgent.toLowerCase();
+		    if (ua.match(/MicroMessenger/i) == 'micromessenger') { // 微信浏览器判断
+		        return false;
+		    } else if (ua.match(/QQ/i) == 'qq') { // QQ浏览器判断
+		        return false;
+		    } else if (ua.match(/WeiBo/i) == "weibo") {
+		        return false;
+		    } else {
+		        if (ua.match(/Android/i) != null) {
+		            return ua.match(/browser/i) == null;
+		        } else if (ua.match(/iPhone/i) != null) {
+		            return ua.match(/safari/i) == null;
+		        } else {
+		            return (ua.match(/macintosh/i) == null && ua.match(/windows/i) == null);
+		        };
+		    };
+		};
+		
+        /*站位图填充色*/
+	    /*var colorLists = ["#2F4C52", "#414D65", "#A3A093", "#8F5B56", "#DDE8DE", "#F2E6F7", "#D0F6F9", "#F4F6B6", "#EFADCD"];
+		var loodings = document.querySelectorAll(".looding")
+		var loodingsLength = loodings.length;
+		for(var i=0; i<loodingsLength; i++){
+			var num = Math.floor(Math.random()*10);
+			var colorList = colorLists[num]
+			loodings[i].style='background'+colorList;
+		}*/
+		var jsonStr = [
+		    {
+		        "type": "banner", 
+		        "title": "", 
+		        "subtitle": "", 
+		        "more_url": "", 
+		        "lists": [
+		        	{
+		                "click_url": "http://native.m.wantscart.com/theme/3378", 
+		                "img_url": "http://static.wantscart.com/product/1531995246802_1000_500"
+		            },
+		        	{
+		                "click_url": "http://native.m.wantscart.com/theme/3184", 
+		                "img_url": "http://static.wantscart.com/product/1531467637_3184"
+		            },
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3370", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_2222.jpg"
+		            },
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3367", 
+		                "img_url": "http://static.wantscart.com/product/1531551327_3330.jpg"
+		            }
+		        ]
+		    }, 
+		    {
+		        "type": "panel_6", 
+		        "title": "最新上架", 
+		        "subtitle": "第一时间送上最潮品", 
+		        "more_url": "", 
+		        "lists": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/99514", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_99514.jpg", 
+		                "list_text": "中国字造“ 开门见山”印花男式短袖T恤CAUT4014", 
+		                "list_price": "￥59"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101138", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_101138.jpg", 
+		                "list_text": "白色唐人街T恤CAUT2039", 
+		                "list_price": "￥76"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101147", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_101147.jpg", 
+		                "list_text": "绿色个性人物印花T恤CAUT2042", 
+		                "list_price": "￥66"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101131", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_101131.jpg", 
+		                "list_text": "蓝色潮流字母T恤CAUT2036", 
+		                "list_price": "￥79"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/96124", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_96124.jpg", 
+		                "list_text": "街头撞色字母侧条纹复古运动裤男式休闲短裤 CAUP4004", 
+		                "list_price": "￥89"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101350", 
+		                "img_url": "http://static.wantscart.com/product/1531551330_101350.jpg", 
+		                "list_text": "撞色彩边抽绳短裤CAUP4102", 
+		                "list_price": "￥119"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/99576", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_99576.jpg", 
+		                "list_text": "潮牌街头棕榈树火烈鸟插画男式短袖T恤CAUT4023", 
+		                "list_price": "￥59"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/97699", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_97699.jpg", 
+		                "list_text": "宇宙赚钱公司 oversize男式短袖T恤CAUT4012", 
+		                "list_price": "￥78"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101351", 
+		                "img_url": "http://static.wantscart.com/product/1531551330_101351.jpg", 
+		                "list_text": "格子黑边抽绳短裤CAUP4103", 
+		                "list_price": "￥119"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101252", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_101252.jpg", 
+		                "list_text": "粉色领布拼色简约POLO衫CAUT2062", 
+		                "list_price": "￥76"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/100815", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_100815.jpg", 
+		                "list_text": "卡其色工装短裤CAUP2029", 
+		                "list_price": "￥146"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/100814", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_100814.jpg", 
+		                "list_text": "卡其色工装短裤CAUP2029", 
+		                "list_price": "￥146"
+		            }
+		        ]
+		    }, 
+		    {
+		        "type": "panel_1", 
+		        "title": "", 
+		        "subtitle": "", 
+		        "more_url": "", 
+		        "lists": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3369", 
+		                "img_url": "http://static.wantscart.com/product/1531467637_3285"
+		            }
+		        ]
+		    }, 
+		    {
+		        "type": "panel_4", 
+		        "title": "畅销单品", 
+		        "subtitle": "最热门的单品推荐", 
+		        "more_url": "", 
+		        "lists": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/96048", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_96048.jpg", 
+		                "list_text": "日系简约休闲英文字母印花男式短袖T恤CAUT4000", 
+		                "list_price": "￥59"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/96113", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_96113.jpg", 
+		                "list_text": "街头撞色字母侧条纹复古运动裤男式休闲短裤 CAUP4004", 
+		                "list_price": "￥89"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/96062", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_96062.jpg", 
+		                "list_text": "文化印花高街oversize男式T恤短袖 CAUT4002", 
+		                "list_price": "￥88"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/99800", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_99800.jpg", 
+		                "list_text": "复古学院侧条纹男式运动裤休闲裤CAUP4038", 
+		                "list_price": "￥96"
+		            },{
+		                "click_url": "http://native.m.wantscart.com/product/101254", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_101254.jpg", 
+		                "list_text": "绿色领部拼色简约POLO衫CAUT2062", 
+		                "list_price": "￥76"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101310", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_101310.jpg", 
+		                "list_text": "白色简约印花T恤CAUT2063", 
+		                "list_price": "￥66"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/96700", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_96700.jpg", 
+		                "list_text": "男士夏季基本款休闲五分短裤 藏青色 CAUP2000 ", 
+		                "list_price": "￥88"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101265", 
+		                "img_url": "http://static.wantscart.com/product/1531551330_101265.jpg", 
+		                "list_text": "深灰色休闲小脚裤CAUP2065", 
+		                "list_price": "￥79"
+		            }
+		        ]
+		    }, 
+		    {
+		        "type": "panel_t_1", 
+		        "title_img": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3355", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_3333.jpeg"
+		            }
+		        ], 
+		        "title": "潮流优选", 
+		        "subtitle": "潮人们都在穿什么", 
+		        "more_url": "http://native.m.wantscart.com/theme/3355", 
+		        "lists": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/99578", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_99578.jpg", 
+		                "list_text": "肩部条纹加长圆弧下摆男式衬衫CAUR4024", 
+		                "list_price": "￥106"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101126", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_101126.jpg", 
+		                "list_text": "男女同款绿色复古格子衬衫CAUT2033", 
+		                "list_price": "￥98"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/99575", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_99575.jpg", 
+		                "list_text": "潮牌洗水迷彩格纹多口袋男式休闲短裤工装裤CAUP4022", 
+		                "list_price": "￥116"
+		            },
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101134", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_101134.jpg", 
+		                "list_text": "紫色潮流撞色字母图案T恤CAUT2037", 
+		                "list_price": "￥78"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/98939", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_98939.jpg", 
+		                "list_text": "夏日欧美潮流街头风男女款趣味头像印花T恤  红色 CAUT2025 ", 
+		                "list_price": "￥96"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/99796", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_99796.jpg", 
+		                "list_text": "撞色条纹英文字母印花缩脚裤松紧运动裤休闲裤CAUP4037", 
+		                "list_price": "￥96"
+		            }
+		        ]
+		    }, 
+		    {
+		        "type": "panel_t_3_h", 
+		        "title_img": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3356", 
+		                "img_url": "http://static.wantscart.com/product/1531467637_3258"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3358", 
+		                "img_url": "http://static.wantscart.com/product/1531551330_3358.jpg"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3357", 
+		                "img_url": "http://static.wantscart.com/product/1531467637_3172"
+		            }
+		        ], 
+		        "title": "经典百搭", 
+		        "subtitle": "经典服装随你百搭", 
+		        "more_url": "",
+		        "lists": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101310", 
+		                "img_url": "http://static.wantscart.com/101310.jpg", 
+		                "list_text": "撞色中长款连...", 
+		                "list_price": "￥66"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101250", 
+		                "img_url": "http://static.wantscart.com/101250.jpg", 
+		                "list_text": "格子吊带连衣...", 
+		                "list_price": "￥76"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/91240", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_91240.jpg", 
+		                "list_text": "基本款圆领纯色侧边开叉袖口毛圈布T恤 男/女 CAST501 ", 
+		                "list_price": "￥68"
+		            }
+		        ]
+		    }, 
+		    {
+		        "type": "panel_t_2", 
+		        "title_img": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3363", 
+		                "img_url": "http://static.wantscart.com/product/1531467637_96048"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3370", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_5555.jpg"
+		            }
+		        ], 
+		        "title": "清仓折扣", 
+		        "subtitle": "好物清仓折上折", 
+		        "more_url": "http://native.m.wantscart.com/theme/3378", 
+		        "lists": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/89977", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_89977.jpg", 
+		                "list_text": "基本款圆领纯半袖色贴布口袋T恤 男女同款 CAST500 ", 
+		                "list_price": "￥76"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/93616", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_93616.jpg", 
+		                "list_text": "CLOTHEORY 春夏款纯棉透气拼接圆领T 男款 CAST513", 
+		                "list_price": "￥126"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/91345", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_91345.jpg", 
+		                "list_text": "春秋款弹力修身休闲运动针织牛仔裤男款  CASP130", 
+		                "list_price": "￥129"
+		            }
+		        ]
+		    }, 
+		    {
+		        "type": "panel_t_3_s", 
+		        "title_img": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3198", 
+		                "img_url": "http://static.wantscart.com/product/1531467637_3198"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3367", 
+		                "img_url": "http://static.wantscart.com/product/1531467637_3183"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/theme/3360", 
+		                "img_url": "http://static.wantscart.com/product/1531467637_3189"
+		            }
+		        ], 
+		        "title": "生活馆", 
+		        "subtitle": "好生活在这里", 
+		        "more_url": "http://native.m.wantscart.com/theme/3371", 
+		        "lists": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/96140", 
+		                "img_url": "http://static.wantscart.com/96140.jpg", 
+		                "list_text": "撞色中长款连...", 
+		                "list_price": "￥76"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/102844", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_102844.jpg", 
+		                "list_text": "防刮花铝框行李箱皮带旅行密码箱1618", 
+		                "list_price": "￥266"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/102928", 
+		                "img_url": "http://static.wantscart.com/product/1531551329_102928.jpg", 
+		                "list_text": "铝框拉杆旅行箱1708", 
+		                "list_price": "￥239"
+		            }
+		        ]
+		    }, 
+		    {
+		        "type": "panel_9", 
+		        "title": "为你推荐", 
+		        "subtitle": "最热门的单品推荐", 
+		        "more_url": "", 
+		        "lists": [
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/98225", 
+		                "img_url": "http://static.wantscart.com/product/1531551327_1111.jpg", 
+		                "list_text": "文化印花高街...", 
+		                "list_price": "￥86"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101235", 
+		                "img_url": "http://static.wantscart.com/101235.jpg", 
+		                "list_text": "粉色树叶衬衫...", 
+		                "list_price": "￥96"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/99793", 
+		                "img_url": "http://static.wantscart.com/99793.jpg", 
+		                "list_text": "立体剪裁纯色多...", 
+		                "list_price": "￥146"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/99739", 
+		                "img_url": "http://static.wantscart.com/99739.jpg", 
+		                "list_text": "复古运动裤撞色...", 
+		                "list_price": "￥96"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/99790", 
+		                "img_url": "http://static.wantscart.com/99790.jpg", 
+		                "list_text": "侧条纹口袋贴布...", 
+		                "list_price": "￥118"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/98877", 
+		                "img_url": "http://static.wantscart.com/98877.jpg", 
+		                "list_text": "CAUP2023新...", 
+		                "list_price": "￥108"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101376", 
+		                "img_url": "http://static.wantscart.com/101376.jpg", 
+		                "list_text": "ins超火灰蓝...", 
+		                "list_price": "￥76"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101263", 
+		                "img_url": "http://static.wantscart.com/101263.jpg", 
+		                "list_text": "吊带收腰显瘦...", 
+		                "list_price": "￥126"
+		            }, 
+		            {
+		                "click_url": "http://native.m.wantscart.com/product/101277", 
+		                "img_url": "http://static.wantscart.com/101277.jpg", 
+		                "list_text": "大小波点复古...", 
+		                "list_price": "￥116"
+		            }
+		        ]
+		    }
+		];
+		/* 将模板插入到指定位置 */
+		for(var i=0; i<jsonStr.length; i++){
+			var html = "";
+			switch(jsonStr[i].type){
+				case "banner":
+					var jsonStrlists = jsonStr[i].lists;
+					html += '<div class="swiper-container"><div class="swiper-wrapper">';
+					for(var n=0; n<jsonStrlists.length; n++){
+						html += '<div class="swiper-slide panel_auto" style="width:100%">'+
+						      		'<a data-src="'+ jsonStr[i].lists[n].click_url +'">'+
+						      			'<img src="'+ jsonStr[i].lists[n].img_url +'" alt="" />'+
+						      		'</a>'+
+						      	'</div>';
+					}
+					html +='</div><div class="swiper-pagination"></div></div>';
+					$("#banner").append(html);
+					break;
+				case "panel_6":
+					html += '<div class="panel_title panel_aotu panel_top panel_c">'+
+								'<div class="panel_l">'+
+									'<p><span>'+ jsonStr[i].title +'</span></p>'+
+									'<p><span>'+ jsonStr[i].subtitle +'</span></p>'+
+								'</div>'+
+								'<div class="panel_r" style="display : '+ (jsonStr[i].more_url.length<=0?"none":"block") +';">'+
+									'<p><a data-src="'+ jsonStr[i].more_url +'">查看更多</a></p>'+
+								'</div>'+
+							'</div><div class="swiper-container3"><div class="swiper-wrapper panel_aotu">';
+					var jsonStrlists = jsonStr[i].lists;
+					for(var n=0; n<(jsonStrlists.length/3); n++){
+						var num = 3;
+						html += '<div class="swiper-slide">'+
+						      		'<ul class="panel_c">'+
+						      			'<li><a data-src="'+ jsonStrlists[(num*n)].click_url +'">'+
+								      		'<img src="'+ jsonStrlists[(num*n)].img_url +'" alt="" />'+
+								      		'<p>'+ jsonStrlists[(num*n)].list_text +'</p>'+
+								      		'<p>'+ jsonStrlists[(num*n)].list_price +'</p>'+
+										'</a></li>'+
+						      			'<li><a data-src="'+ jsonStrlists[(num*n + 1)].click_url +'">'+
+								      		'<img src="'+ jsonStrlists[(num*n + 1)].img_url +'" alt="" />'+
+								      		'<p>'+ jsonStrlists[(num*n + 1)].list_text +'</p>'+
+								      		'<p>'+ jsonStrlists[(num*n + 1)].list_price +'</p>'+
+										'</a></li>'+
+						      			'<li><a data-src="'+ jsonStrlists[(num*n + 2)].click_url +'">'+
+								      		'<img src="'+ jsonStrlists[(num*n + 2)].img_url +'" alt="" />'+
+								      		'<p>'+ jsonStrlists[(num*n + 2)].list_text +'</p>'+
+								      		'<p>'+ jsonStrlists[(num*n + 2)].list_price +'</p>'+
+										'</a></li>'+
+						      		'</ul>'+
+						      	'</div>';
+					}
+					html += '</div><div class="swiper-pagination"></div></div>';
+					$("#panel_6").append(html);
+					break;
+				case "panel_1":
+					var jsonStrlists = jsonStr[i].lists;
+					for(var n=0; n<(jsonStrlists.length); n++){
+						html += '<a class="looding" data-src="'+ jsonStrlists[n].click_url +'">'+
+							'<img src="'+ jsonStrlists[n].img_url +'" alt="" />'+
+						'</a>';
+					}
+					$("#panel_1").append(html);
+					break;
+				case "panel_4":
+					html += '<div class="panel_title panel_aotu panel_top panel_c">'+
+								'<div class="panel_l">'+
+									'<p><span>'+ jsonStr[i].title +'</span></p>'+
+									'<p><span>'+ jsonStr[i].subtitle +'</span></p>'+
+								'</div>'+
+								'<div class="panel_r" style="display : '+ (jsonStr[i].more_url.length<=0?"none":"block") +';">'+
+									'<p><a data-src="'+ jsonStr[i].more_url +'">查看更多</a></p>'+
+								'</div>'+
+							'</div><div class="swiper-container4"><div class="swiper-wrapper panel_aotu">';
+					var jsonStrlists = jsonStr[i].lists;
+					for(var n=0; n<(jsonStrlists.length/2); n++){
+						var num = 2;
+						html += '<div class="swiper-slide">'+
+						      		'<ul class="panel_c">'+
+						      			'<li><a data-src="'+ jsonStrlists[(num*n)].click_url +'">'+
+								      		'<img src="'+ jsonStrlists[(num*n)].img_url +'" alt="" />'+
+								      		'<p>'+ jsonStrlists[(num*n)].list_text +'</p>'+
+								      		'<p>'+ jsonStrlists[(num*n)].list_price +'</p>'+
+										'</a></li>'+
+						      			'<li><a data-src="'+ jsonStrlists[(num*n + 1)].click_url +'">'+
+								      		'<img src="'+ jsonStrlists[(num*n + 1)].img_url +'" alt="" />'+
+								      		'<p>'+ jsonStrlists[(num*n + 1)].list_text +'</p>'+
+								      		'<p>'+ jsonStrlists[(num*n + 1)].list_price +'</p>'+
+										'</a></li>'+
+						      		'</ul>'+
+						      	'</div>';
+					}
+					html += '</div><div class="swiper-pagination"></div></div>';
+					$("#panel_4").append(html);
+					break;
+				case "panel_t_1":
+					html += '<ul class="panel_c">'+
+								'<li><a data-src="'+ jsonStr[i].title_img[0].click_url +'">'+
+									'<img src="'+ jsonStr[i].title_img[0].img_url +'" alt="" />'+
+								'</a></li>'+
+							'</ul>';
+					html += '<div class="panel_title panel_aotu panel_top panel_c">'+
+								'<div class="panel_l">'+
+									'<p><span>'+ jsonStr[i].title +'</span></p>'+
+									'<p><span>'+ jsonStr[i].subtitle +'</span></p>'+
+								'</div>'+
+								'<div class="panel_r" style="display : '+ (jsonStr[i].more_url.length<=0?"none":"block") +';">'+
+									'<p><a data-src="'+ jsonStr[i].more_url +'">查看更多</a></p>'+
+								'</div>'+
+							'</div><div class="swiper-containers"><div class="swiper-wrapper">';
+					var jsonStrlists = jsonStr[i].lists;
+					for(var n=0; n<(jsonStrlists.length); n++){
+						html += '<div class="swiper-slide">'+
+						      		'<ul class="panel_c">'+
+										'<li><a data-src="'+ jsonStrlists[n].click_url +'">'+
+								      		'<img src="'+ jsonStrlists[n].img_url +'" alt="" />'+
+								      		'<p>'+ jsonStrlists[n].list_text +'</p>'+
+								      		'<p>'+ jsonStrlists[n].list_price +'</p>'+
+										'</a></li>'+
+						      		'</ul>'+
+						      	'</div>';
+					}
+					html += '</div><div class="swiper-paginations"></div></div>';
+					$("#panel_t_1").append(html);
+					break;
+				case "panel_t_3_h":
+					html += '<div class="panel_aotu panel_c panel_top"><div class="panel_l">'+
+								'<ul class="panel_c">'+
+									'<li><a data-src="'+ jsonStr[i].title_img[0].click_url +'">'+
+										'<img src="'+ jsonStr[i].title_img[0].img_url +'" alt="" />'+
+									'</a></li>'+
+								'</ul>'+
+							'</div>'+
+							'<div class="panel_r">'+
+								'<ul class="panel_c">'+
+									'<li><a data-src="'+ jsonStr[i].title_img[1].click_url +'">'+
+										'<img src="'+ jsonStr[i].title_img[1].img_url +'" alt="" />'+
+									'</a></li>'+
+									'<li><a data-src="'+ jsonStr[i].title_img[2].click_url +'">'+
+										'<img src="'+ jsonStr[i].title_img[2].img_url +'" alt="" />'+
+									'</a></li>'+
+								'</ul>'+
+							'</div></div>';
+					html += '<div class="panel_title panel_aotu panel_top panel_c">'+
+								'<div class="panel_l">'+
+									'<p><span>'+ jsonStr[i].title +'</span></p>'+
+									'<p><span>'+ jsonStr[i].subtitle +'</span></p>'+
+								'</div>'+
+								'<div class="panel_r" style="display : '+ (jsonStr[i].more_url.length<=0?"none":"block") +';">'+
+									'<p class="panel_r"><a data-src="'+ jsonStr[i].more_url +'">查看更多</a></p>'+
+								'</div>'+
+							'</div><div class="swiper-containers"><div class="swiper-wrapper">';
+					var jsonStrlists = jsonStr[i].lists;
+					for(var n=0; n<(jsonStrlists.length); n++){
+						html += '<div class="swiper-slide">'+
+						      		'<ul class="panel_c">'+
+										'<li><a data-src="'+ jsonStrlists[n].click_url +'">'+
+								      		'<img src="'+ jsonStrlists[n].img_url +'" alt="" />'+
+								      		'<p>'+ jsonStrlists[n].list_text +'</p>'+
+								      		'<p>'+ jsonStrlists[n].list_price +'</p>'+
+										'</a></li>'+
+						      		'</ul>'+
+						      	'</div>';
+					}
+					html += '</div><div class="swiper-paginations"></div></div></div>';
+					$("#panel_t_3_h").append(html);
+					break;
+				case "panel_t_2":
+					html += '<div class="panel_aotu panel_c panel_top"><div class="panel_l">'+
+								'<ul class="panel_c">'+
+									'<li><a data-src="'+ jsonStr[i].title_img[0].click_url +'">'+
+										'<img src="'+ jsonStr[i].title_img[0].img_url +'" alt="" />'+
+									'</a></li>'+
+								'</ul>'+
+							'</div>'+
+							'<div class="panel_r">'+
+								'<ul class="panel_c">'+
+									'<li><a data-src="'+ jsonStr[i].title_img[1].click_url +'">'+
+										'<img src="'+ jsonStr[i].title_img[1].img_url +'" alt="" />'+
+									'</a></li>'+
+								'</ul>'+
+							'</div></div>';
+					html += '<div class="panel_title panel_aotu panel_top panel_c">'+
+								'<div class="panel_l">'+
+									'<p><span>'+ jsonStr[i].title +'</span></p>'+
+									'<p><span>'+ jsonStr[i].subtitle +'</span></p>'+
+								'</div>'+
+								'<div class="panel_r" style="display : '+ (jsonStr[i].more_url.length<=0?"none":"block") +';">'+
+									'<p class="panel_r"><a data-src="'+ jsonStr[i].more_url +'">查看更多</a></p>'+
+								'</div>'+
+							'</div><div class="swiper-containers"><div class="swiper-wrapper">';
+					var jsonStrlists = jsonStr[i].lists;
+					for(var n=0; n<(jsonStrlists.length); n++){
+						html += '<div class="swiper-slide">'+
+						      		'<ul class="panel_c">'+
+										'<li><a data-src="'+ jsonStrlists[n].click_url +'">'+
+								      		'<img src="'+ jsonStrlists[n].img_url +'" alt="" />'+
+								      		'<p>'+ jsonStrlists[n].list_text +'</p>'+
+								      		'<p>'+ jsonStrlists[n].list_price +'</p>'+
+										'</a></li>'+
+						      		'</ul>'+
+						      	'</div>';
+					}
+					html += '</div><div class="swiper-paginations"></div></div></div>';
+					$("#panel_t_2").append(html);
+					break;
+				case "panel_t_3_s":
+					html += '<div class="panel_aotu panel_c panel_top"><ul>'+
+								'<li><a data-src="'+ jsonStr[i].title_img[0].click_url +'">'+
+									'<img src="'+ jsonStr[i].title_img[0].img_url +'" alt="" />'+
+								'</a></li>'+
+							'</ul>'+
+							'<div class="panel_l">'+
+								'<ul class="panel_c panel_top">'+
+									'<li><a data-src="'+ jsonStr[i].title_img[1].click_url +'">'+
+										'<img src="'+ jsonStr[i].title_img[1].img_url +'" alt="" />'+
+									'</a></li>'+
+								'</ul>'+
+							'</div>'+
+							'<div class="panel_r">'+
+								'<ul class="panel_c panel_top">'+
+									'<li><a data-src="'+ jsonStr[i].title_img[2].click_url +'">'+
+										'<img src="'+ jsonStr[i].title_img[2].img_url +'" alt="" />'+
+									'</a></li>'+
+								'</ul>'+
+							'</div></div>';
+					html += '<div class="panel_title panel_aotu panel_top panel_c">'+
+								'<div class="panel_l">'+
+									'<p><span>'+ jsonStr[i].title +'</span></p>'+
+									'<p><span>'+ jsonStr[i].subtitle +'</span></p>'+
+								'</div>'+
+								'<div class="panel_r" style="display : '+ (jsonStr[i].more_url.length<=0?"none":"block") +';">'+
+									'<p class="panel_r"><a data-src="'+ jsonStr[i].more_url +'">查看更多</a></p>'+
+								'</div>'+
+							'</div><div class="swiper-containers"><div class="swiper-wrapper">';
+					var jsonStrlists = jsonStr[i].lists;
+					for(var n=0; n<(jsonStrlists.length); n++){
+						html += '<div class="swiper-slide">'+
+						      		'<ul class="panel_c">'+
+										'<li><a data-src="'+ jsonStrlists[n].click_url +'">'+
+								      		'<img src="'+ jsonStrlists[n].img_url +'" alt="" />'+
+								      		'<p>'+ jsonStrlists[n].list_text +'</p>'+
+								      		'<p>'+ jsonStrlists[n].list_price +'</p>'+
+										'</a></li>'+
+						      		'</ul>'+
+						      	'</div>';
+					}
+					html += '</div><div class="swiper-paginations"></div></div></div>';
+					$("#panel_t_3_s").append(html);
+					break;
+				case "panel_9":
+					html += '<div class="panel_title panel_aotu panel_top panel_c">'+
+								'<div class="panel_l">'+
+									'<p><span>'+ jsonStr[i].title +'</span></p>'+
+									'<p><span>'+ jsonStr[i].subtitle +'</span></p>'+
+								'</div>'+
+							'</div><ul class="panel_c panel_aotu panel_c">';
+					var jsonStrlists = jsonStr[i].lists;
+					for(var n=0; n<(jsonStrlists.length); n++){
+						html += '<li><a data-src="'+ jsonStrlists[n].click_url +'">'+
+						      		'<img src="'+ jsonStrlists[n].img_url +'" alt="" />'+
+						      		'<p>'+ jsonStrlists[n].list_text +'</p>'+
+						      		'<p>'+ jsonStrlists[n].list_price +'</p>'+
+								'</a></li>';
+					}
+					html += '</ul></div>';
+					$("#panel_9").append(html);
+					break;
+			}
+			if(i==(jsonStr.length-1)){
+				/* banner */
+				var swiper = new Swiper('.swiper-container', {
+	    			autoplay: 5000,
+	        		visibilityFullFit: true,
+			      	pagination: {
+			        	el: '.swiper-pagination',
+			      	}
+			    });
+			    var swiper = new Swiper('.swiper-container3', {
+			        followFinger:true,//值为false时，仅当你释放slide时才会滑动，当你用手指按住滑块它不会动。
+			      	slidesPerColumn: 2,
+			      	pagination: {
+			        	el: '.swiper-pagination',
+			        	clickable: true,
+			      	},
+			    });
+			    var swiper = new Swiper('.swiper-container4', {
+			        followFinger:true,//值为false时，仅当你释放slide时才会滑动，当你用手指按住滑块它不会动。
+			      	slidesPerColumn: 2,
+			      	pagination: {
+			        	el: '.swiper-pagination'
+			      	},
+			    });
+			    var swiper = new Swiper('.swiper-containers', {
+			        followFinger:true,//值为false时，仅当你释放slide时才会滑动，当你用手指按住滑块它不会动。
+			      	slidesPerView: 3,
+			      	spaceBetween: 10,
+			    });
+			    /*点击事件*/
+				$("a").on("touchstart", function(e) {
+					timeOutEvent = setTimeout("longPress()",500);
+					var lengthNum = 0;
+					$(this).on("touchmove", function(e){
+						clearTimeout(timeOutEvent);
+						lengthNum += 1;
+					});
+					$(this).on("touchend", function(e){
+						clearTimeout(timeOutEvent);
+						if(lengthNum == 0){
+		        			window.location.href = $(this).attr("data-src");
+						};
+					});
+		        });
+		        /*当H5页面不在原生APP中打开，且当浏览器窗口发生改变时，刷新页面*/
+				$(window).resize(function () {
+					// 使用方式
+					if (openInWebview()) {
+						return false;
+					} else {
+						window.location.reload();
+					};
+				});
+			}
+		}
+	</script>
+</body>
+</html>
