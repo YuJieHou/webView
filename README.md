@@ -1,7 +1,3 @@
-## WebView 配置说明详情地址：
-
-> http://wiki.wantscart.com/pages/viewpage.action?pageId=6227386
-
 ## 目录
 
 *   [依赖列表](https://github.com/panteng/wechat-h5-boilerplate#%E4%BE%9D%E8%B5%96%E5%88%97%E8%A1%A8)
